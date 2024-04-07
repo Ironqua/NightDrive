@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 
 public class NPCcarMove : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     Rigidbody2D rb;
     private float movementspeed = 3f;
     float ypoint = 5f;
@@ -25,7 +25,7 @@ public class NPCcarMove : MonoBehaviour
        
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         Destroy(this.gameObject, 15f);
@@ -61,10 +61,10 @@ public class NPCcarMove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Sollama"))
+        if (collision.gameObject.CompareTag("Left"))
         {
             GameManager.score += 25;
-            Debug.Log("sollama");
+           
 
         }
     }
